@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technoscope - Mobile Game Studio</title>
+  <meta name="description" content="Technoscope is an independent mobile game studio creating engaging puzzle and brain-training games for players worldwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0c1d;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --accent: #7C4DFF;
+      --accent-bright: #9E7BFF;
+      --accent-glow: rgba(124, 77, 255, 0.35);
+      --text: #F1F0F7;
+      --text-muted: #A3A0B8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Ambient background glows */
+    .glow-1 {
+      position: absolute;
+      top: -100px;
+      left: 20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-2 {
+      position: absolute;
+      top: 400px;
+      right: 10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 10;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo-badge {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #7C4DFF, #448AFF);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      position: relative;
+      z-index: 10;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 60px 0 80px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(124, 77, 255, 0.15);
+      border: 1px solid rgba(124, 77, 255, 0.3);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-bright);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #C4B9E9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 36px;
+    }
+
+    /* Featured Game Card */
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .featured-card {
+      background: linear-gradient(135deg, rgba(30, 24, 60, 0.7) 0%, rgba(20, 18, 42, 0.9) 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .featured-card:hover {
+      border-color: rgba(124, 77, 255, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .game-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: #7C4DFF;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .game-info h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .game-info p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+    }
+
+    .game-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .feature-item span {
+      color: #9E7BFF;
+      font-weight: bold;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7C4DFF, #536DFE);
+      color: #fff;
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(124, 77, 255, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .game-preview {
+      background: linear-gradient(135deg, rgba(124, 77, 255, 0.15) 0%, rgba(68, 138, 255, 0.05) 100%);
+      border: 1px dashed rgba(124, 77, 255, 0.3);
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 280px;
+    }
+
+    .preview-icon {
+      font-size: 4rem;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 8px 16px var(--accent-glow));
+    }
+
+    .preview-stats {
+      display: flex;
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .stat-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-number {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 40px 24px;
+      max-width: 1100px;
+      margin: 60px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+
+  <header>
+    <a href="/" class="logo">
+      <div class="logo-badge">⚡</div>
+      Technoscope
+    </a>
+    <nav>
+      <a href="#games">Games</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="https://github.com/technoscope" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="pill">🎮 Mobile Game Studio</div>
+      <h1>Fun, Clever & Handcrafted<br/>Puzzle Games</h1>
+      <p>We create relaxing, brain-boosting games designed to test your logic, sharpen your mind, and bring hours of joyful challenges.</p>
+    </section>
+
+    <section id="games">
+      <div class="section-title">
+        <span>⭐</span> Featured Release
+      </div>
+
+      <div class="featured-card">
+        <div class="game-info">
+          <div class="game-badge">New Release</div>
+          <h2>Brain Boost</h2>
+          <p>
+            An all-in-one puzzle adventure featuring seven distinct mechanics and hundreds of carefully crafted levels across 10 vibrant worlds.
+          </p>
+
+          <div class="game-features">
+            <div class="feature-item"><span>✓</span> 7 Puzzle Games in One</div>
+            <div class="feature-item"><span>✓</span> 350+ Progressive Levels</div>
+            <div class="feature-item"><span>✓</span> 10 Themed Worlds</div>
+            <div class="feature-item"><span>✓</span> 100% Offline Playable</div>
+          </div>
+
+          <div class="btn-group">
+            <a href="https://play.google.com/store/apps/developer?id=Technoscope" target="_blank" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.22-.916V2.73c0-.337.079-.652.22-.916zM15.207 13.414l2.585 2.586-13.064 7.545 10.479-10.131zm0-2.828L4.728.455l13.064 7.545-2.585 2.586zm1.414 1.414l3.535 2.041c.983.568.983 1.493 0 2.062l-3.535 2.041-2.121-2.121 2.121-2.023z"/>
+              </svg>
+              Google Play
+            </a>
+            <a href="/privacy-policy.html" class="btn btn-secondary">
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+
+        <div class="game-preview">
+          <div class="preview-icon">🧠⚡</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Brain Boost 2D</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Puzzle & Mind Challenge Collection</p>
+          <div class="preview-stats">
+            <div class="stat-box">
+              <div class="stat-number">7</div>
+              <div class="stat-label">Game Modes</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">350+</div>
+              <div class="stat-label">Levels</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">10</div>
+              <div class="stat-label">Worlds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Technoscope. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/app-ads.txt">app-ads.txt</a>
+      <a href="https://github.com/technoscope" target="_blank">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
