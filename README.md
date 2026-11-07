@@ -1,10 +1,10 @@
-# Technoscope Developer Website
+# OneStopSolutions Developer Website
 
-Official developer landing page, privacy policy, and app-ads.txt verification for **Technoscope** apps and games.
+Official developer landing page, privacy policy, and app-ads.txt verification for **OneStopSolutions** apps and games.
 
 ## Hosted Files
 
-- **Home / Developer Site:** `https://technoscope.github.io/`
-- **ClipCut Video Editor Privacy Policy:** `https://technoscope.github.io/clipcut-privacy-policy.html`
-- **Brain Boost Privacy Policy:** `https://technoscope.github.io/privacy-policy.html`
-- **AdMob app-ads.txt:** `https://technoscope.github.io/app-ads.txt`
+- **Home / Developer Site:** `https://onestopsolutions.github.io/`
+- **ClipCut Video Editor Privacy Policy:** `https://onestopsolutions.github.io/clipcut-privacy-policy.html`
+- **Brain Boost Privacy Policy:** `https://onestopsolutions.github.io/privacy-policy.html`
+- **AdMob app-ads.txt:** `https://onestopsolutions.github.io/app-ads.txt`
