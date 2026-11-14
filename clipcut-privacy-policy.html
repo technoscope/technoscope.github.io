@@ -1,304 +1,202 @@
 <!DOCTYPE html>
+<!--
+  Upload this file to technoscope.github.io as /clipcut-privacy-policy.html (same URL as in
+  Play Console). Source of truth: PRIVACY_POLICY.md in the app repo. Keep the two in sync.
+-->
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy - ClipCut: Video Editor & Maker | Technoscope</title>
-  <meta name="description" content="Privacy Policy for ClipCut: Video Editor & Maker (com.onestop.clipcut) developed by Technoscope." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · EditLine: Video Editor &amp; Maker</title>
+  <meta name="description" content="How EditLine: Video Editor &amp; Maker handles your videos, audio, AI voiceover, analytics, ads, consent and purchases.">
   <style>
     :root {
-      --bg: #090710;
-      --card-bg: rgba(255, 255, 255, 0.04);
-      --card-border: rgba(255, 255, 255, 0.1);
-      --accent: #6C5CE7;
-      --accent-bright: #00F5FF;
-      --accent-pink: #FF6B9D;
-      --text: #F0EDFF;
-      --text-muted: #B0AACC;
+      --bg: #FAF9F7;
+      --surface: #FFFFFF;
+      --text: #1B1A19;
+      --muted: #5E5A55;
+      --hairline: #E3DFD9;
+      --brand: #D9431A;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0B0C;
+        --surface: #141416;
+        --text: #F2EFEA;
+        --muted: #A8A29B;
+        --hairline: #2A2A2E;
+        --brand: #FF5B2E;
+      }
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.75;
-      padding: 0 20px 80px;
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
-    .container {
-      max-width: 860px;
-      margin: 40px auto;
+    main { max-width: 780px; margin: 0 auto; padding: 40px 16px 80px; }
+    .eyebrow {
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
     }
-    .back-nav {
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 16px; }
+    h2 {
+      font-size: 20px;
+      margin: 40px 0 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairline);
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+    .meta div { margin: 3px 0; }
+    .summary {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-left: 4px solid var(--brand);
+      border-radius: 8px;
+      padding: 16px 20px;
       margin-bottom: 28px;
     }
-    .back-nav a {
-      color: var(--accent-bright);
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.95rem;
-      transition: opacity 0.2s;
-    }
-    .back-nav a:hover { opacity: 0.8; }
-    .badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 14px;
-      background: rgba(0, 245, 255, 0.1);
-      border: 1px solid rgba(0, 245, 255, 0.3);
-      border-radius: 999px;
-      color: var(--accent-bright);
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 900;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, #FFFFFF 0%, #AA96F7 50%, #00F5FF 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -0.5px;
-    }
-    .meta-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 20px 24px;
-      margin: 24px 0 36px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
-    .meta-card strong { color: var(--text); }
-    h2 {
-      color: var(--accent-bright);
-      margin: 40px 0 16px;
-      font-size: 1.45rem;
-      font-weight: 800;
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: 10px;
-    }
-    h3 {
-      color: #FFF;
-      margin: 22px 0 10px;
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-    p { margin-bottom: 14px; color: #E0DCF5; }
-    ul, ol { margin: 12px 0 20px 24px; color: #E0DCF5; }
-    li { margin-bottom: 8px; }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 20px 0;
-      background: var(--card-bg);
-      border-radius: 10px;
-      overflow: hidden;
-      font-size: 0.95rem;
-    }
+    ul { padding-left: 20px; }
+    li { margin: 8px 0; }
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
     th, td {
-      border: 1px solid var(--card-border);
-      padding: 12px 18px;
       text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--hairline);
     }
-    th {
-      background: rgba(108, 92, 231, 0.2);
-      color: #FFF;
-      font-weight: 700;
-    }
-    td { color: #DDD; }
-    a { color: var(--accent-bright); text-decoration: underline; }
-    a:hover { color: var(--accent-pink); }
-    .highlight-box {
-      background: rgba(108, 92, 231, 0.12);
-      border-left: 4px solid var(--accent);
-      padding: 16px 20px;
-      margin: 24px 0;
-      border-radius: 6px;
-      color: #F0EDFF;
-    }
-    .highlight-box strong { color: #00F5FF; }
-    .badge-check {
-      color: #00D68F;
-      font-weight: bold;
-    }
-    footer {
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--card-border);
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      text-align: center;
+    th { color: var(--muted); font-weight: 600; background: var(--surface); }
+    code {
+      font: 13px/1.4 ui-monospace, "JetBrains Mono", Consolas, monospace;
+      overflow-wrap: anywhere;
+      background: rgba(125, 125, 125, 0.1);
+      padding: 2px 5px;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <div class="back-nav">
-      <a href="/">&larr; Back to Technoscope Home</a>
-    </div>
-
-    <div class="badge-pill">OFFICIAL LEGAL COMPLIANCE</div>
-    <h1>Privacy Policy</h1>
-    <p style="color: var(--text-muted); font-size: 1.1rem; font-weight: 600;">ClipCut: Video Editor & Maker</p>
-
-    <div class="meta-card">
-      <div><strong>App Name:</strong> ClipCut: Video Editor & Maker</div>
-      <div><strong>Package Name:</strong> com.onestop.clipcut</div>
-      <div><strong>Developer / Studio:</strong> Technoscope</div>
-      <div><strong>Contact Email:</strong> onestopsultions@gmail.com</div>
-      <div><strong>Effective Date:</strong> November 2, 2026</div>
-      <div><strong>Last Updated:</strong> November 2, 2026</div>
-    </div>
-
-    <div class="highlight-box">
-      <strong>🔒 100% Client-Side Video Processing:</strong><br>
-      ClipCut processes all your videos, photos, and audio files <strong>entirely on your device</strong>. Your personal media files are <strong>NEVER</strong> uploaded, stored, or transmitted to any external server or cloud storage.
-    </div>
-
-    <h2>1. Introduction</h2>
-    <p>
-      Welcome to <strong>ClipCut: Video Editor & Maker</strong> (&ldquo;the App&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), developed by <strong>Technoscope</strong>. We provide high-performance, mobile video editing tools that allow users to trim, merge, color grade, add audio, and produce high-resolution videos for social media platforms such as TikTok, Instagram Reels, and YouTube Shorts.
-    </p>
-    <p>
-      We respect your privacy and are committed to protecting it through compliance with this Privacy Policy and applicable data protection regulations including Google Play Developer Policies, GDPR, and CCPA/CPRA.
-    </p>
-
-    <h2>2. User Media & On-Device Processing (No Cloud Uploads)</h2>
-    <p>
-      ClipCut is engineered as an offline-first video editor. All media manipulations—including cutting, trimming, applying 3D LUT filters, rendering kinetic text overlays, adjusting speed curves, and exporting lossless 4K 60FPS video—take place locally using your device's built-in hardware acceleration and local storage.
-    </p>
-    <ul>
-      <li><span class="badge-check">✓</span> <strong>Your media is private:</strong> We do not have access to your personal videos, photos, or voice recordings.</li>
-      <li><span class="badge-check">✓</span> <strong>No external uploads:</strong> Media files selected from your gallery are loaded directly into the app's local memory and are never transmitted to our servers or any third-party infrastructure.</li>
-      <li><span class="badge-check">✓</span> <strong>Export destination:</strong> Exported MP4 videos and GIFs are saved directly into your device's local photo/video gallery under your direct control.</li>
-    </ul>
-
-    <h2>3. Device Permissions & Purpose</h2>
-    <p>To deliver core video editing features, ClipCut requests specific Android operating system permissions. You can grant or revoke these permissions at any time via your device settings:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Permission</th>
-          <th>Technical Identifier</th>
-          <th>Usage Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Videos Access</strong></td>
-          <td><code>READ_MEDIA_VIDEO</code> / <code>READ_EXTERNAL_STORAGE</code></td>
-          <td>Allows you to select and import video clips into the editor timeline.</td>
-        </tr>
-        <tr>
-          <td><strong>Audio Access</strong></td>
-          <td><code>READ_MEDIA_AUDIO</code></td>
-          <td>Allows you to pick background music and sound tracks stored on your device.</td>
-        </tr>
-        <tr>
-          <td><strong>Photos Access</strong></td>
-          <td><code>READ_MEDIA_IMAGES</code></td>
-          <td>Allows you to select photos for B-roll overlays or Picture-in-Picture (PIP) layers.</td>
-        </tr>
-        <tr>
-          <td><strong>Microphone</strong></td>
-          <td><code>RECORD_AUDIO</code></td>
-          <td>Strictly used when you tap the "Record Voiceover" button to record audio directly onto the timeline. Audio is saved locally only.</td>
-        </tr>
-        <tr>
-          <td><strong>Camera (Optional)</strong></td>
-          <td><code>CAMERA</code></td>
-          <td>Used only if you choose to record video footage directly from within the app.</td>
-        </tr>
-        <tr>
-          <td><strong>Internet & Network</strong></td>
-          <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
-          <td>Used solely for displaying advertisements via Google AdMob and checking internet connectivity.</td>
-        </tr>
-        <tr>
-          <td><strong>In-App Purchases</strong></td>
-          <td><code>com.android.vending.BILLING</code></td>
-          <td>Processes premium subscription or ad-removal purchases securely through Google Play Billing.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h2>4. Advertising & Third-Party SDKs</h2>
-    <p>
-      ClipCut uses reputable third-party SDKs to support ongoing free development and provide secure purchasing options:
-    </p>
-
-    <h3>Google AdMob (Google Inc.)</h3>
-    <p>
-      We use Google AdMob to display banner, interstitial, and rewarded video ads. Google AdMob may automatically collect and process certain non-personal diagnostic and advertising data, which may include:
-    </p>
-    <ul>
-      <li>Google Advertising ID (AAID)</li>
-      <li>Device model, manufacturer, and operating system version</li>
-      <li>Approximate coarse location derived from IP address</li>
-      <li>Ad interaction metrics (views, clicks, impressions)</li>
-    </ul>
-    <p>
-      For more details on how Google processes ad data, please review:
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy & Terms</a> and 
-      <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>.
-    </p>
-
-    <h3>Google Play In-App Billing</h3>
-    <p>
-      If you purchase an optional premium subscription or one-time upgrade (e.g. ad-free version), the transaction is processed securely through Google Play. We do not collect, view, or store your credit card or financial information.
-    </p>
-
-    <h2>5. Children's Privacy (COPPA Compliance)</h2>
-    <p>
-      ClipCut is intended for general audiences aged 13 and above. We do not knowingly collect, request, or solicit personal information from children under 13 years of age. If we become aware that a child under 13 has provided us with personal information, we will take immediate steps to delete such data from our records.
-    </p>
-
-    <h2>6. User Data Rights & Data Retention</h2>
-    <p>Depending on your jurisdiction (such as under the EU General Data Protection Regulation (GDPR) or California Consumer Privacy Act (CCPA/CPRA)), you hold specific privacy rights:</p>
-    <ul>
-      <li><strong>Right to Deletion:</strong> Because all project files, draft edits, and media clips are stored locally on your device, you have complete autonomy to delete them at any time by clearing the app's cache/data or uninstalling the app.</li>
-      <li><strong>Right to Restrict or Revoke Permissions:</strong> You may toggle camera, microphone, or storage permissions on or off at any moment in your Android device's <em>Settings &gt; Apps &gt; ClipCut &gt; Permissions</em>.</li>
-      <li><strong>Personalized Ads Opt-Out:</strong> You can opt out of personalized interest-based advertising on your Android device by visiting <em>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</em> or <em>Reset advertising ID</em>.</li>
-      <li><strong>No Sale of Data:</strong> We do <strong>NOT</strong> sell, trade, or rent any user data to third parties.</li>
-    </ul>
-
-    <h2>7. Data Security</h2>
-    <p>
-      We implement industry-standard technical measures to safeguard your app interactions. Since user project files and video exports reside locally within the application sandbox on your device, your files are protected by Android's native sandboxing security model.
-    </p>
-
-    <h2>8. Changes to This Privacy Policy</h2>
-    <p>
-      We may update our Privacy Policy periodically to reflect changes in our practices or applicable legal requirements. The updated policy will be posted on this page with an updated &ldquo;Last Updated&rdquo; date. We encourage you to review this page periodically for any modifications.
-    </p>
-
-    <h2>9. Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us at:</p>
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:onestopsultions@gmail.com">onestopsultions@gmail.com</a></li>
-      <li><strong>Developer Studio:</strong> Technoscope / OneStop Solutions</li>
-      <li><strong>Developer Website:</strong> <a href="https://technoscope.github.io/">https://technoscope.github.io/</a></li>
-    </ul>
-
-    <footer>
-      &copy; 2026 Technoscope. All rights reserved. &bull; <a href="/">Home</a> &bull; <a href="/privacy-policy.html">Brain Boost Policy</a> &bull; <a href="/clipcut-privacy-policy.html">ClipCut Policy</a>
-    </footer>
+<main>
+  <p class="eyebrow">EditLine · Privacy</p>
+  <h1>Privacy Policy for EditLine: Video Editor &amp; Maker</h1>
+  <div class="meta">
+    <div><strong>App:</strong> EditLine: Video Editor &amp; Maker (Android, package <code>com.onestop.clipcut</code>)</div>
+    <div><strong>Developer:</strong> Technoscope / OneStop Solutions</div>
+    <div><strong>Contact:</strong> <a href="mailto:onestopsultions@gmail.com">onestopsultions@gmail.com</a></div>
+    <div><strong>Public URL:</strong> <a href="https://technoscope.github.io/clipcut-privacy-policy.html">https://technoscope.github.io/clipcut-privacy-policy.html</a></div>
+    <div><strong>Effective date:</strong> 14 November 2026</div>
   </div>
 
+  <div class="summary">
+    <ul>
+      <li><strong>No account required:</strong> You never need to create an account, register, or sign in.</li>
+      <li><strong>Your media stays on your device:</strong> Videos, photos, audio tracks, and voiceovers are processed entirely on your phone. We do not upload your media to any cloud servers.</li>
+      <li><strong>On-device AI Voiceover:</strong> Text-to-speech synthesis runs 100% locally on your device hardware using an embedded on-device voice model. Your text and generated voices are never sent to external AI servers.</li>
+      <li><strong>Free tier advertising (Google AdMob):</strong> The free version displays ads. AdMob collects pseudonymous device data (such as the Advertising ID) to serve and measure ads. In the EEA, UK, and Switzerland, the app presents a Google-certified consent dialog before requesting ads, and you can modify your choices at any time in <strong>Settings › Privacy choices</strong>.</li>
+      <li><strong>App analytics (Google Analytics for Firebase):</strong> We use Firebase Analytics on Android to measure app stability, performance, and feature usage to continuously improve the app. No videos, photos, or personally identifiable information are sent to analytics.</li>
+      <li><strong>Secure in-app purchases:</strong> EditLine Pro subscriptions and lifetime passes are processed securely through Google Play Billing. We never receive or store your credit card or financial payment details.</li>
+    </ul>
+  </div>
+
+  <h2>1. Your Videos, Photos, Audio, and AI Voiceover</h2>
+  <ul>
+    <li><strong>Photo &amp; Video Selection:</strong> Media files are imported using Android's system photo picker (<code>PickVisualMedia</code>). This ensures EditLine only accesses the specific photos and videos you explicitly choose, without requiring broad access to your entire media library.</li>
+    <li><strong>On-Device Editing &amp; Rendering:</strong> Trimming, splitting, speed changes, video reversing, transitions, filters, color adjustments, audio detachment, and video exporting happen entirely on your device using hardware-accelerated Media3 and MediaCodec pipelines.</li>
+    <li><strong>AI Voiceover (Text-to-Speech):</strong> When you use the AI Voiceover feature, speech synthesis is performed <strong>100% locally on your device</strong> by an embedded on-device model (Kokoro TTS). Text entered for speech synthesis is processed locally and is never transmitted over the internet to any external cloud service.</li>
+    <li><strong>Audio Recordings &amp; Detached Audio:</strong> Voiceover recordings made via the microphone and audio detached from video clips are stored strictly in the app's private sandbox storage on your device.</li>
+    <li><strong>Saving &amp; Sharing:</strong> Rendered videos are saved directly to your device gallery (<code>Movies › EditLine</code>). When you choose to share a video via the system share sheet, the video file is transferred directly to the application you select, governed by that application's privacy policy.</li>
+    <li><strong>Local Project Storage:</strong> Project metadata, undo/redo history, and settings are stored locally on your device. You can erase this data at any time by deleting individual projects within the app, clearing app storage in Android settings, or uninstalling the app.</li>
+  </ul>
+
+  <h2>2. Permissions</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Permission</th><th>Why the app requests it</th></tr></thead>
+      <tbody>
+        <tr><td><code>CAMERA</code></td><td>Record video clips directly within the app when you tap the Camera button.</td></tr>
+        <tr><td><code>RECORD_AUDIO</code></td><td>Record voiceover audio tracks using your device microphone. Audio stays local.</td></tr>
+        <tr><td><code>READ_MEDIA_AUDIO</code></td><td>Browse and import music/audio files from your device storage (Android 13+).</td></tr>
+        <tr><td><code>READ_EXTERNAL_STORAGE</code></td><td>Access user-selected media on legacy Android versions (Android 12 and below).</td></tr>
+        <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Save exported videos to your gallery on legacy Android versions (Android 9 and below).</td></tr>
+        <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Load advertisements, sync Firebase Analytics metrics, and verify subscription purchases with Google Play.</td></tr>
+        <tr><td><code>com.android.vending.BILLING</code></td><td>Purchase EditLine Pro subscriptions and lifetime passes through Google Play.</td></tr>
+        <tr><td><code>com.google.android.gms.permission.AD_ID</code>, <code>ACCESS_ADSERVICES_*</code></td><td>Used by the Google Mobile Ads SDK to manage the Android Advertising ID and Privacy Sandbox attribution.</td></tr>
+        <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Used by media player and background export components to prevent the device from sleeping during video rendering.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The Android system photo picker requires no runtime permissions, so EditLine never requests full access to your photo or video gallery.</p>
+
+  <h2>3. Advertising (Google AdMob)</h2>
+  <p>The free version displays banner, interstitial, app-open, and rewarded ads provided by <strong>Google AdMob</strong>. When requesting an advertisement, the Google Mobile Ads SDK collects and shares certain information with Google:</p>
+  <ul>
+    <li><strong>Device Identifiers:</strong> Mobile Advertising ID (AAID) and App Set ID.</li>
+    <li><strong>Approximate Location:</strong> Coarse geographic location derived from your device's IP address.</li>
+    <li><strong>App Interactions:</strong> Ad impressions, clicks, views, and app launch events.</li>
+    <li><strong>SDK Diagnostics:</strong> Crash logs and technical performance metrics.</li>
+  </ul>
+  <p>Google uses this information to deliver, personalize, and measure advertisements, as well as to detect and prevent fraud. For full details on how Google handles advertising data, review <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p><strong>EditLine Pro:</strong> Upgrading to Pro completely removes all advertisements.</p>
+
+  <h2>4. Analytics (Google Analytics for Firebase)</h2>
+  <p>EditLine utilizes <strong>Google Analytics for Firebase</strong> (on Android) to help us understand how users engage with the app, identify technical issues, and improve app stability. Firebase Analytics collects:</p>
+  <ul>
+    <li><strong>App Usage Metrics:</strong> App launches, session durations, screen views, and engagement with editing features (e.g., export started, tool selected).</li>
+    <li><strong>Device &amp; Technical Information:</strong> Device model, operating system version, app version code, language setting, and general device hardware specs.</li>
+    <li><strong>Approximate Geographic Data:</strong> City or country-level location derived from IP address.</li>
+  </ul>
+  <p>Firebase Analytics data is pseudonymous and aggregated. We do <strong>not</strong> transmit personal names, email addresses, phone numbers, or user video/audio content to Firebase. For more details on Firebase data security and privacy, review <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h2>5. Consent and Privacy Choices</h2>
+  <ul>
+    <li><strong>EEA, UK, and Switzerland:</strong> In compliance with the General Data Protection Regulation (GDPR) and ePrivacy Directive, the app presents a Google-certified User Messaging Platform (UMP) consent dialog on first launch. You can review or modify your consent choices at any time directly in the app under <strong>Settings › Privacy choices</strong>.</li>
+    <li><strong>Everywhere:</strong> You can reset or delete your Android Advertising ID at any time in your device settings under <strong>Settings › Google › Ads</strong> (or <strong>Settings › Privacy › Ads</strong>). Deleting the Advertising ID prevents advertising networks from associating ad interactions with your device.</li>
+  </ul>
+
+  <h2>6. Purchases &amp; Subscriptions (Google Play Billing)</h2>
+  <p>EditLine Pro (available as monthly, yearly, or lifetime plans) is sold exclusively through <strong>Google Play In-App Billing</strong>.</p>
+  <ul>
+    <li><strong>Payment Processing:</strong> All transactions are handled securely by Google Play. We do not collect, process, or store your payment card numbers, banking details, or billing addresses.</li>
+    <li><strong>Subscription Management:</strong> Google Play returns a secure purchase token confirming your Pro status. The app queries Google Play on launch to maintain active subscription entitlements.</li>
+    <li><strong>Cancellations &amp; Refunds:</strong> You can manage, change, or cancel subscriptions at any time through <strong>Google Play Store › Payments &amp; subscriptions › Subscriptions</strong>, or via the <strong>Manage subscription</strong> button in the app.</li>
+  </ul>
+
+  <h2>7. Data Retention &amp; Deletion</h2>
+  <p>We do not operate external user database servers, and we do not store your media files remotely. All projects, export history, and local preferences remain in the app's sandboxed storage on your device until you delete them or uninstall the app. Analytics and advertising data collected by Google are retained according to Google's standard retention schedules. You can manage data associated with your Google account at <a href="https://myaccount.google.com">myaccount.google.com</a>.</p>
+
+  <h2>8. Your Privacy Rights</h2>
+  <p>Depending on your jurisdiction (such as under the GDPR, UK GDPR, or California Consumer Privacy Act / CPRA):</p>
+  <ul>
+    <li>You have the right to request access to or deletion of your personal data.</li>
+    <li>Because we do not store personal information or account profiles on developer servers, uninstalling the app or clearing app storage deletes all locally stored data immediately.</li>
+    <li>We do not sell or share personal information for monetary value.</li>
+    <li>To exercise rights regarding data processed by Google services (AdMob, Firebase, Google Play), please consult Google's privacy portal.</li>
+  </ul>
+
+  <h2>9. Children's Privacy</h2>
+  <p>EditLine is intended for general audiences aged 13 and older and is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe that a child has provided personal information through the app, please contact us immediately.</p>
+
+  <h2>10. Security</h2>
+  <p>All communications between the app and third-party SDKs (Google AdMob, Firebase, Google Play) are encrypted in transit using industry-standard Transport Layer Security (HTTPS/TLS). Your local files are protected by Android's application sandboxing architecture.</p>
+
+  <h2>11. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect app updates, new features, or evolving legal requirements. Any modifications will be posted to this page with an updated effective date.</p>
+
+  <h2>12. Contact Us</h2>
+  <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or your data, please contact us:</p>
+  <ul>
+    <li><strong>Developer:</strong> Technoscope / OneStop Solutions</li>
+    <li><strong>Email:</strong> <a href="mailto:onestopsultions@gmail.com">onestopsultions@gmail.com</a></li>
+    <li><strong>Website:</strong> <a href="https://technoscope.github.io/">https://technoscope.github.io/</a></li>
+  </ul>
+</main>
 </body>
 </html>
