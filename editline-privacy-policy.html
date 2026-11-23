@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+  Upload this file to technoscope.github.io as /clipcut-privacy-policy.html (same URL as in
+  Play Console). Source of truth: PRIVACY_POLICY.md in the app repo. Keep the two in sync.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · EditLine: Video Editor &amp; Maker</title>
+  <meta name="description" content="How EditLine: Video Editor &amp; Maker handles your videos, audio, AI voiceover, analytics, ads, consent and purchases.">
+  <style>
+    :root {
+      --bg: #FAF9F7;
+      --surface: #FFFFFF;
+      --text: #1B1A19;
+      --muted: #5E5A55;
+      --hairline: #E3DFD9;
+      --brand: #D9431A;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0B0C;
+        --surface: #141416;
+        --text: #F2EFEA;
+        --muted: #A8A29B;
+        --hairline: #2A2A2E;
+        --brand: #FF5B2E;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 780px; margin: 0 auto; padding: 40px 16px 80px; }
+    .eyebrow {
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 16px; }
+    h2 {
+      font-size: 20px;
+      margin: 40px 0 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairline);
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+    .meta div { margin: 3px 0; }
+    .summary {
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-left: 4px solid var(--brand);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+    }
+    ul { padding-left: 20px; }
+    li { margin: 8px 0; }
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    th { color: var(--muted); font-weight: 600; background: var(--surface); }
+    code {
+      font: 13px/1.4 ui-monospace, "JetBrains Mono", Consolas, monospace;
+      overflow-wrap: anywhere;
+      background: rgba(125, 125, 125, 0.1);
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">EditLine · Privacy</p>
+  <h1>Privacy Policy for EditLine: Video Editor &amp; Maker</h1>
+  <div class="meta">
+    <div><strong>App:</strong> EditLine: Video Editor &amp; Maker (Android, package <code>com.onestop.clipcut</code>)</div>
+    <div><strong>Developer:</strong> Technoscope / OneStop Solutions</div>
+    <div><strong>Contact:</strong> <a href="mailto:onestopsultions@gmail.com">onestopsultions@gmail.com</a></div>
+    <div><strong>Public URL:</strong> <a href="https://technoscope.github.io/clipcut-privacy-policy.html">https://technoscope.github.io/clipcut-privacy-policy.html</a></div>
+    <div><strong>Effective date:</strong> 14 November 2026</div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li><strong>No account required:</strong> You never need to create an account, register, or sign in.</li>
+      <li><strong>Your media stays on your device:</strong> Videos, photos, audio tracks, and voiceovers are processed entirely on your phone. We do not upload your media to any cloud servers.</li>
+      <li><strong>On-device AI Voiceover:</strong> Text-to-speech synthesis runs 100% locally on your device hardware using an embedded on-device voice model. Your text and generated voices are never sent to external AI servers.</li>
+      <li><strong>Free tier advertising (Google AdMob):</strong> The free version displays ads. AdMob collects pseudonymous device data (such as the Advertising ID) to serve and measure ads. In the EEA, UK, and Switzerland, the app presents a Google-certified consent dialog before requesting ads, and you can modify your choices at any time in <strong>Settings › Privacy choices</strong>.</li>
+      <li><strong>App analytics (Google Analytics for Firebase):</strong> We use Firebase Analytics on Android to measure app stability, performance, and feature usage to continuously improve the app. No videos, photos, or personally identifiable information are sent to analytics.</li>
+      <li><strong>Secure in-app purchases:</strong> EditLine Pro subscriptions and lifetime passes are processed securely through Google Play Billing. We never receive or store your credit card or financial payment details.</li>
+    </ul>
+  </div>
+
+  <h2>1. Your Videos, Photos, Audio, and AI Voiceover</h2>
+  <ul>
+    <li><strong>Photo &amp; Video Selection:</strong> Media files are imported using Android's system photo picker (<code>PickVisualMedia</code>). This ensures EditLine only accesses the specific photos and videos you explicitly choose, without requiring broad access to your entire media library.</li>
+    <li><strong>On-Device Editing &amp; Rendering:</strong> Trimming, splitting, speed changes, video reversing, transitions, filters, color adjustments, audio detachment, and video exporting happen entirely on your device using hardware-accelerated Media3 and MediaCodec pipelines.</li>
+    <li><strong>AI Voiceover (Text-to-Speech):</strong> When you use the AI Voiceover feature, speech synthesis is performed <strong>100% locally on your device</strong> by an embedded on-device model (Kokoro TTS). Text entered for speech synthesis is processed locally and is never transmitted over the internet to any external cloud service.</li>
+    <li><strong>Audio Recordings &amp; Detached Audio:</strong> Voiceover recordings made via the microphone and audio detached from video clips are stored strictly in the app's private sandbox storage on your device.</li>
+    <li><strong>Saving &amp; Sharing:</strong> Rendered videos are saved directly to your device gallery (<code>Movies › EditLine</code>). When you choose to share a video via the system share sheet, the video file is transferred directly to the application you select, governed by that application's privacy policy.</li>
+    <li><strong>Local Project Storage:</strong> Project metadata, undo/redo history, and settings are stored locally on your device. You can erase this data at any time by deleting individual projects within the app, clearing app storage in Android settings, or uninstalling the app.</li>
+  </ul>
+
+  <h2>2. Permissions</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Permission</th><th>Why the app requests it</th></tr></thead>
+      <tbody>
+        <tr><td><code>CAMERA</code></td><td>Record video clips directly within the app when you tap the Camera button.</td></tr>
+        <tr><td><code>RECORD_AUDIO</code></td><td>Record voiceover audio tracks using your device microphone. Audio stays local.</td></tr>
+        <tr><td><code>READ_MEDIA_AUDIO</code></td><td>Browse and import music/audio files from your device storage (Android 13+).</td></tr>
+        <tr><td><code>READ_EXTERNAL_STORAGE</code></td><td>Access user-selected media on legacy Android versions (Android 12 and below).</td></tr>
+        <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Save exported videos to your gallery on legacy Android versions (Android 9 and below).</td></tr>
+        <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Load advertisements, sync Firebase Analytics metrics, and verify subscription purchases with Google Play.</td></tr>
+        <tr><td><code>com.android.vending.BILLING</code></td><td>Purchase EditLine Pro subscriptions and lifetime passes through Google Play.</td></tr>
+        <tr><td><code>com.google.android.gms.permission.AD_ID</code>, <code>ACCESS_ADSERVICES_*</code></td><td>Used by the Google Mobile Ads SDK to manage the Android Advertising ID and Privacy Sandbox attribution.</td></tr>
+        <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Used by media player and background export components to prevent the device from sleeping during video rendering.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The Android system photo picker requires no runtime permissions, so EditLine never requests full access to your photo or video gallery.</p>
+
+  <h2>3. Advertising (Google AdMob)</h2>
+  <p>The free version displays banner, interstitial, app-open, and rewarded ads provided by <strong>Google AdMob</strong>. When requesting an advertisement, the Google Mobile Ads SDK collects and shares certain information with Google:</p>
+  <ul>
+    <li><strong>Device Identifiers:</strong> Mobile Advertising ID (AAID) and App Set ID.</li>
+    <li><strong>Approximate Location:</strong> Coarse geographic location derived from your device's IP address.</li>
+    <li><strong>App Interactions:</strong> Ad impressions, clicks, views, and app launch events.</li>
+    <li><strong>SDK Diagnostics:</strong> Crash logs and technical performance metrics.</li>
+  </ul>
+  <p>Google uses this information to deliver, personalize, and measure advertisements, as well as to detect and prevent fraud. For full details on how Google handles advertising data, review <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p><strong>EditLine Pro:</strong> Upgrading to Pro completely removes all advertisements.</p>
+
+  <h2>4. Analytics (Google Analytics for Firebase)</h2>
+  <p>EditLine utilizes <strong>Google Analytics for Firebase</strong> (on Android) to help us understand how users engage with the app, identify technical issues, and improve app stability. Firebase Analytics collects:</p>
+  <ul>
+    <li><strong>App Usage Metrics:</strong> App launches, session durations, screen views, and engagement with editing features (e.g., export started, tool selected).</li>
+    <li><strong>Device &amp; Technical Information:</strong> Device model, operating system version, app version code, language setting, and general device hardware specs.</li>
+    <li><strong>Approximate Geographic Data:</strong> City or country-level location derived from IP address.</li>
+  </ul>
+  <p>Firebase Analytics data is pseudonymous and aggregated. We do <strong>not</strong> transmit personal names, email addresses, phone numbers, or user video/audio content to Firebase. For more details on Firebase data security and privacy, review <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h2>5. Consent and Privacy Choices</h2>
+  <ul>
+    <li><strong>EEA, UK, and Switzerland:</strong> In compliance with the General Data Protection Regulation (GDPR) and ePrivacy Directive, the app presents a Google-certified User Messaging Platform (UMP) consent dialog on first launch. You can review or modify your consent choices at any time directly in the app under <strong>Settings › Privacy choices</strong>.</li>
+    <li><strong>Everywhere:</strong> You can reset or delete your Android Advertising ID at any time in your device settings under <strong>Settings › Google › Ads</strong> (or <strong>Settings › Privacy › Ads</strong>). Deleting the Advertising ID prevents advertising networks from associating ad interactions with your device.</li>
+  </ul>
+
+  <h2>6. Purchases &amp; Subscriptions (Google Play Billing)</h2>
+  <p>EditLine Pro (available as monthly, yearly, or lifetime plans) is sold exclusively through <strong>Google Play In-App Billing</strong>.</p>
+  <ul>
+    <li><strong>Payment Processing:</strong> All transactions are handled securely by Google Play. We do not collect, process, or store your payment card numbers, banking details, or billing addresses.</li>
+    <li><strong>Subscription Management:</strong> Google Play returns a secure purchase token confirming your Pro status. The app queries Google Play on launch to maintain active subscription entitlements.</li>
+    <li><strong>Cancellations &amp; Refunds:</strong> You can manage, change, or cancel subscriptions at any time through <strong>Google Play Store › Payments &amp; subscriptions › Subscriptions</strong>, or via the <strong>Manage subscription</strong> button in the app.</li>
+  </ul>
+
+  <h2>7. Data Retention &amp; Deletion</h2>
+  <p>We do not operate external user database servers, and we do not store your media files remotely. All projects, export history, and local preferences remain in the app's sandboxed storage on your device until you delete them or uninstall the app. Analytics and advertising data collected by Google are retained according to Google's standard retention schedules. You can manage data associated with your Google account at <a href="https://myaccount.google.com">myaccount.google.com</a>.</p>
+
+  <h2>8. Your Privacy Rights</h2>
+  <p>Depending on your jurisdiction (such as under the GDPR, UK GDPR, or California Consumer Privacy Act / CPRA):</p>
+  <ul>
+    <li>You have the right to request access to or deletion of your personal data.</li>
+    <li>Because we do not store personal information or account profiles on developer servers, uninstalling the app or clearing app storage deletes all locally stored data immediately.</li>
+    <li>We do not sell or share personal information for monetary value.</li>
+    <li>To exercise rights regarding data processed by Google services (AdMob, Firebase, Google Play), please consult Google's privacy portal.</li>
+  </ul>
+
+  <h2>9. Children's Privacy</h2>
+  <p>EditLine is intended for general audiences aged 13 and older and is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe that a child has provided personal information through the app, please contact us immediately.</p>
+
+  <h2>10. Security</h2>
+  <p>All communications between the app and third-party SDKs (Google AdMob, Firebase, Google Play) are encrypted in transit using industry-standard Transport Layer Security (HTTPS/TLS). Your local files are protected by Android's application sandboxing architecture.</p>
+
+  <h2>11. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect app updates, new features, or evolving legal requirements. Any modifications will be posted to this page with an updated effective date.</p>
+
+  <h2>12. Contact Us</h2>
+  <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or your data, please contact us:</p>
+  <ul>
+    <li><strong>Developer:</strong> Technoscope / OneStop Solutions</li>
+    <li><strong>Email:</strong> <a href="mailto:onestopsultions@gmail.com">onestopsultions@gmail.com</a></li>
+    <li><strong>Website:</strong> <a href="https://technoscope.github.io/">https://technoscope.github.io/</a></li>
+  </ul>
+</main>
+</body>
+</html>

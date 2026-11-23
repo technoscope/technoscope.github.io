@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Technoscope - Mobile Apps & Game Studio</title>
-  <meta name="description" content="Technoscope is an independent mobile app and game studio creating creative video editing tools, engaging puzzles, and brain-training games for users worldwide." />
+  <title>Technoscope - Mobile Apps &amp; Game Studio</title>
+  <meta name="description" content="Technoscope is an independent mobile app and game studio creating pro-grade video editing and color grading tools, privacy-first utilities, high-speed connectivity, and brain-training puzzle games." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -17,6 +17,8 @@
       --accent-bright: #9E7BFF;
       --accent-cyan: #00F5FF;
       --accent-pink: #FF6B9D;
+      --accent-green: #00E676;
+      --accent-orange: #FF9100;
       --accent-glow: rgba(124, 77, 255, 0.35);
       --text: #F1F0F7;
       --text-muted: #A3A0B8;
@@ -51,11 +53,22 @@
 
     .glow-2 {
       position: absolute;
-      top: 400px;
+      top: 600px;
       right: 10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(0, 245, 255, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-3 {
+      position: absolute;
+      top: 1400px;
+      left: 10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(255, 107, 157, 0.12) 0%, transparent 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -63,7 +76,7 @@
     header {
       position: relative;
       z-index: 10;
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 28px 24px;
       display: flex;
@@ -76,35 +89,36 @@
       align-items: center;
       gap: 12px;
       font-weight: 800;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       color: #fff;
       text-decoration: none;
       letter-spacing: -0.5px;
     }
 
     .logo-badge {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #7C4DFF, #00E5FF);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       box-shadow: 0 4px 16px var(--accent-glow);
     }
 
     nav {
       display: flex;
-      gap: 22px;
+      gap: 18px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: var(--text-muted);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       transition: color 0.2s ease;
     }
 
@@ -112,40 +126,44 @@
       color: #fff;
     }
 
+    nav .nav-highlight {
+      color: var(--accent-cyan);
+    }
+
     main {
       position: relative;
       z-index: 10;
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 40px 24px 100px;
+      padding: 30px 24px 100px;
     }
 
     .hero {
       text-align: center;
-      max-width: 800px;
-      margin: 40px auto 70px;
+      max-width: 840px;
+      margin: 30px auto 65px;
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 16px;
+      padding: 6px 18px;
       border-radius: 50px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--accent-bright);
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .hero h1 {
-      font-size: 3.2rem;
+      font-size: 3.3rem;
       font-weight: 900;
       letter-spacing: -1.5px;
       line-height: 1.15;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       background: linear-gradient(180deg, #FFFFFF 0%, #C4B9E9 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -158,7 +176,7 @@
     }
 
     .section-title {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       margin-bottom: 24px;
@@ -172,27 +190,43 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      padding: 40px;
+      padding: 36px 40px;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 36px;
       align-items: center;
       backdrop-filter: blur(10px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-      margin-bottom: 40px;
+      margin-bottom: 36px;
       position: relative;
       overflow: hidden;
-      transition: transform 0.25s ease, border-color 0.25s ease;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     }
 
     .featured-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(124, 77, 255, 0.4);
+      border-color: rgba(124, 77, 255, 0.45);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 24px rgba(124, 77, 255, 0.2);
     }
 
-    .featured-card.clipcut-theme:hover {
+    .featured-card.lutora-theme:hover {
+      border-color: rgba(255, 145, 0, 0.5);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 28px rgba(255, 145, 0, 0.22);
+    }
+
+    .featured-card.editline-theme:hover {
       border-color: rgba(0, 245, 255, 0.5);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 245, 255, 0.15);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 245, 255, 0.2);
+    }
+
+    .featured-card.pill-theme:hover {
+      border-color: rgba(0, 230, 118, 0.5);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 230, 118, 0.2);
+    }
+
+    .featured-card.vpn-theme:hover {
+      border-color: rgba(68, 138, 255, 0.5);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), 0 0 28px rgba(68, 138, 255, 0.2);
     }
 
     .game-badge {
@@ -207,13 +241,28 @@
       margin-bottom: 14px;
     }
 
+    .game-badge.badge-orange {
+      background: linear-gradient(135deg, #FF6D00, #FFAB00);
+      color: #000;
+    }
+
     .game-badge.badge-cyan {
       background: linear-gradient(135deg, #00F5FF, #6C5CE7);
       color: #000;
     }
 
+    .game-badge.badge-green {
+      background: linear-gradient(135deg, #00E676, #00B0FF);
+      color: #000;
+    }
+
+    .game-badge.badge-blue {
+      background: linear-gradient(135deg, #2979FF, #651FFF);
+      color: #fff;
+    }
+
     .game-info h2 {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       margin-bottom: 12px;
@@ -221,27 +270,26 @@
 
     .game-info p {
       color: var(--text-muted);
-      margin-bottom: 24px;
-      font-size: 1.05rem;
+      margin-bottom: 22px;
+      font-size: 1.02rem;
     }
 
     .game-features {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 30px;
+      gap: 11px;
+      margin-bottom: 28px;
     }
 
     .feature-item {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: #ddd;
     }
 
     .feature-item span {
-      color: #9E7BFF;
       font-weight: bold;
     }
 
@@ -255,10 +303,10 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 13px 24px;
+      padding: 12px 22px;
       border-radius: 12px;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       text-decoration: none;
       transition: all 0.2s ease;
     }
@@ -274,6 +322,18 @@
       box-shadow: 0 12px 28px rgba(124, 77, 255, 0.5);
     }
 
+    .btn-orange {
+      background: linear-gradient(135deg, #FF6D00, #FFAB00);
+      color: #000;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(255, 109, 0, 0.35);
+    }
+
+    .btn-orange:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(255, 109, 0, 0.55);
+    }
+
     .btn-cyan {
       background: linear-gradient(135deg, #00F5FF, #6C5CE7);
       color: #000;
@@ -284,6 +344,29 @@
     .btn-cyan:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 28px rgba(0, 245, 255, 0.5);
+    }
+
+    .btn-green {
+      background: linear-gradient(135deg, #00E676, #00B0FF);
+      color: #000;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(0, 230, 118, 0.3);
+    }
+
+    .btn-green:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 230, 118, 0.5);
+    }
+
+    .btn-blue {
+      background: linear-gradient(135deg, #2979FF, #651FFF);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(41, 121, 255, 0.35);
+    }
+
+    .btn-blue:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(41, 121, 255, 0.55);
     }
 
     .btn-secondary {
@@ -300,51 +383,67 @@
       background: linear-gradient(135deg, rgba(124, 77, 255, 0.15) 0%, rgba(68, 138, 255, 0.05) 100%);
       border: 1px dashed rgba(124, 77, 255, 0.3);
       border-radius: 20px;
-      padding: 30px;
+      padding: 26px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      min-height: 280px;
+      min-height: 270px;
     }
 
-    .game-preview.preview-clipcut {
+    .game-preview.preview-lutora {
+      background: linear-gradient(135deg, rgba(255, 109, 0, 0.15) 0%, rgba(124, 77, 255, 0.12) 100%);
+      border: 1px solid rgba(255, 109, 0, 0.35);
+    }
+
+    .game-preview.preview-editline {
       background: linear-gradient(135deg, rgba(0, 245, 255, 0.12) 0%, rgba(108, 92, 231, 0.15) 100%);
       border: 1px solid rgba(0, 245, 255, 0.35);
     }
 
+    .game-preview.preview-pill {
+      background: linear-gradient(135deg, rgba(0, 230, 118, 0.12) 0%, rgba(0, 176, 255, 0.12) 100%);
+      border: 1px solid rgba(0, 230, 118, 0.35);
+    }
+
+    .game-preview.preview-vpn {
+      background: linear-gradient(135deg, rgba(41, 121, 255, 0.14) 0%, rgba(101, 31, 255, 0.14) 100%);
+      border: 1px solid rgba(41, 121, 255, 0.35);
+    }
+
     .preview-icon-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 24px;
-      margin-bottom: 14px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 245, 255, 0.4);
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
     }
 
     .preview-stats {
       display: flex;
-      gap: 16px;
-      margin-top: 18px;
+      gap: 12px;
+      margin-top: 16px;
     }
 
     .stat-box {
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
-      padding: 10px 14px;
+      padding: 8px 12px;
       text-align: center;
-      min-width: 75px;
+      min-width: 72px;
     }
 
     .stat-number {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: #fff;
     }
 
     .stat-label {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -353,38 +452,48 @@
 
     footer {
       border-top: 1px solid var(--card-border);
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 40px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 48px 24px;
       color: var(--text-muted);
       font-size: 0.9rem;
     }
 
-    .footer-links {
+    .footer-top {
       display: flex;
-      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .footer-links a {
+    .footer-links-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 14px;
+      font-size: 0.88rem;
+    }
+
+    .footer-links-grid a {
       color: var(--text-muted);
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
-    .footer-links a:hover {
-      color: #fff;
+    .footer-links-grid a:hover {
+      color: var(--accent-cyan);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 820px) {
       .hero h1 { font-size: 2.3rem; }
       .featured-card { grid-template-columns: 1fr; padding: 24px; gap: 28px; }
       .game-features { grid-template-columns: 1fr; }
       header { flex-direction: column; gap: 16px; }
-      nav { flex-wrap: wrap; justify-content: center; gap: 14px; }
-      footer { flex-direction: column; gap: 16px; text-align: center; }
+      nav { flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .footer-top { flex-direction: column; text-align: center; }
+      .footer-links-grid { justify-content: center; }
     }
   </style>
 </head>
@@ -392,6 +501,7 @@
 
   <div class="glow-1"></div>
   <div class="glow-2"></div>
+  <div class="glow-3"></div>
 
   <header>
     <a href="/" class="logo">
@@ -399,60 +509,119 @@
       Technoscope
     </a>
     <nav>
-      <a href="#apps">Apps &amp; Games</a>
+      <a href="#apps">All Apps</a>
+      <a href="/lutora-privacy-policy.html" class="nav-highlight">Lutora Pro Policy</a>
+      <a href="/clipcut-privacy-policy.html">EditLine Policy</a>
       <a href="/pill-reminder-privacy-policy.html">Pill Reminder Policy</a>
-      <a href="/clipcut-privacy-policy.html">ClipCut Privacy Policy</a>
+      <a href="/gulfvpn-privacy-policy.html">Gulf VPN Policy</a>
       <a href="/privacy-policy.html">Brain Boost Policy</a>
-      <a href="https://github.com/technoscope" target="_blank">GitHub</a>
+      <a href="https://github.com/technoscope" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="pill">⚡ Independent App &amp; Game Studio</div>
+      <div class="pill">⚡ Independent Mobile App &amp; Game Studio</div>
       <h1>High-Performance Apps &amp;<br/>Creative Mobile Experiences</h1>
-      <p>We build pro-grade video editing tools and brain-training puzzle games engineered with beautiful design and zero friction.</p>
+      <p>
+        We build pro-grade video editing and color grading pipelines, smart daily health utilities, high-speed secure networks, and brain-training puzzle adventures engineered with modern design and zero friction.
+      </p>
     </section>
 
     <section id="apps">
-      <!-- APP 1: CLIPCUT VIDEO EDITOR -->
+
+      <!-- APP 1: LUTORA PRO (NEWEST RELEASE) -->
       <div class="section-title">
+        <span>🎨</span> Featured Color Grading Studio
+      </div>
+
+      <div class="featured-card lutora-theme">
+        <div class="game-info">
+          <div class="game-badge badge-orange">Latest Release • Video Color Grader</div>
+          <h2>Lutora Pro: 3D LUT Color Grader</h2>
+          <p>
+            Local 3D LUT and batch color grader for mobile videographers and creators. Apply cinema-grade .cube LUTs, tune exposure, contrast, temperature and saturation with 16-bit float precision, and batch export watermark-free 4K video — 100% on-device.
+          </p>
+
+          <div class="game-features">
+            <div class="feature-item"><span style="color:#FF9100;">✓</span> 100% On-Device &amp; Private</div>
+            <div class="feature-item"><span style="color:#FF9100;">✓</span> OpenGL ES 3.0 16-Bit Engine</div>
+            <div class="feature-item"><span style="color:#FF9100;">✓</span> Multi-Clip Batch Color Grading</div>
+            <div class="feature-item"><span style="color:#FF9100;">✓</span> Custom .cube 3D LUT Import</div>
+          </div>
+
+          <div class="btn-group">
+            <a href="https://play.google.com/store/apps/details?id=com.onestop.lutora" target="_blank" rel="noopener" class="btn btn-orange">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.22-.916V2.73c0-.337.079-.652.22-.916zM15.207 13.414l2.585 2.586-13.064 7.545 10.479-10.131zm0-2.828L4.728.455l13.064 7.545-2.585 2.586zm1.414 1.414l3.535 2.041c.983.568.983 1.493 0 2.062l-3.535 2.041-2.121-2.121 2.121-2.023z"/>
+              </svg>
+              Google Play
+            </a>
+            <a href="/lutora-privacy-policy.html" class="btn btn-secondary">
+              Lutora Pro Privacy Policy
+            </a>
+          </div>
+        </div>
+
+        <div class="game-preview preview-lutora">
+          <img src="/lutora-icon.png" alt="Lutora Pro App Icon" class="preview-icon-img" onerror="this.style.display='none'; document.getElementById('alt-lutora').style.display='block';"/>
+          <div id="alt-lutora" style="display:none; font-size:4rem; margin-bottom:12px;">🎨⚡</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Lutora Pro</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Local LUT &amp; Batch Color Grader</p>
+          <div class="preview-stats">
+            <div class="stat-box">
+              <div class="stat-number" style="color:#FF9100;">16-bit</div>
+              <div class="stat-label">Float GPU</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" style="color:#00F5FF;">.cube</div>
+              <div class="stat-label">3D LUTs</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" style="color:#00E676;">0</div>
+              <div class="stat-label">Watermark</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APP 2: EDITLINE (FORMERLY CLIPCUT) -->
+      <div class="section-title" style="margin-top: 48px;">
         <span>🎬</span> Featured Video Editor
       </div>
 
-      <div class="featured-card clipcut-theme">
+      <div class="featured-card editline-theme">
         <div class="game-info">
-          <div class="game-badge badge-cyan">New Release • Video Editor</div>
-          <h2>ClipCut: Video Editor &amp; Maker</h2>
+          <div class="game-badge badge-cyan">Updated Release • Video Editor &amp; Maker</div>
+          <h2>EditLine: Video Editor &amp; Maker</h2>
           <p>
-            The all-in-one mobile video editing studio for TikTok, Instagram Reels, and YouTube Shorts. Multi-track timeline, kinetic auto-captions, 3D LUTs, and buttery smooth velocity curves — 100% free with zero watermarks.
+            The all-in-one mobile video editing studio for TikTok, Instagram Reels, and YouTube Shorts. Multi-track timeline, kinetic auto-captions, on-device AI voiceovers, 3D LUTs, and buttery smooth velocity curves — 100% free with zero watermarks.
           </p>
 
           <div class="game-features">
             <div class="feature-item"><span style="color:#00F5FF;">✓</span> 100% Free &amp; No Watermark</div>
             <div class="feature-item"><span style="color:#00F5FF;">✓</span> Multi-Track Pro Timeline</div>
-            <div class="feature-item"><span style="color:#00F5FF;">✓</span> 0.25x Buttery Slow-Mo &amp; Curves</div>
+            <div class="feature-item"><span style="color:#00F5FF;">✓</span> On-Device AI Voiceovers</div>
             <div class="feature-item"><span style="color:#00F5FF;">✓</span> Lossless 4K 60FPS Export</div>
           </div>
 
           <div class="btn-group">
-            <a href="https://play.google.com/store/apps/details?id=com.onestop.clipcut" target="_blank" class="btn btn-cyan">
+            <a href="https://play.google.com/store/apps/details?id=com.onestop.clipcut" target="_blank" rel="noopener" class="btn btn-cyan">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.22-.916V2.73c0-.337.079-.652.22-.916zM15.207 13.414l2.585 2.586-13.064 7.545 10.479-10.131zm0-2.828L4.728.455l13.064 7.545-2.585 2.586zm1.414 1.414l3.535 2.041c.983.568.983 1.493 0 2.062l-3.535 2.041-2.121-2.121 2.121-2.023z"/>
               </svg>
               Google Play
             </a>
             <a href="/clipcut-privacy-policy.html" class="btn btn-secondary">
-              ClipCut Privacy Policy
+              EditLine Privacy Policy
             </a>
           </div>
         </div>
 
-        <div class="game-preview preview-clipcut">
-          <img src="/clipcut-icon.png" alt="ClipCut App Icon" class="preview-icon-img" onerror="this.style.display='none'; document.getElementById('alt-icon').style.display='block';"/>
-          <div id="alt-icon" style="display:none; font-size:4rem; margin-bottom:12px;">🎬⚡</div>
-          <h3 style="font-size: 1.3rem; margin-bottom: 6px;">ClipCut Studio</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">Mobile Video Editor &amp; Reels Maker</p>
+        <div class="game-preview preview-editline">
+          <img src="/editline-icon.png" alt="EditLine App Icon" class="preview-icon-img" onerror="this.src='/clipcut-icon.png';"/>
+          <h3 style="font-size: 1.25rem; margin-bottom: 6px;">EditLine Studio</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Mobile Video Editor &amp; Reels Maker</p>
           <div class="preview-stats">
             <div class="stat-box">
               <div class="stat-number" style="color:#00F5FF;">4K</div>
@@ -463,35 +632,145 @@
               <div class="stat-label">3D LUTs</div>
             </div>
             <div class="stat-box">
-              <div class="stat-number" style="color:#00D68F;">0</div>
+              <div class="stat-number" style="color:#00E676;">0</div>
               <div class="stat-label">Watermark</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- APP 2: BRAIN BOOST -->
-      <div class="section-title" style="margin-top: 50px;">
+      <!-- APP 3: PILL REMINDER & MED TRACKER -->
+      <div class="section-title" style="margin-top: 48px;">
+        <span>💊</span> Featured Health &amp; Utility
+      </div>
+
+      <div class="featured-card pill-theme">
+        <div class="game-info">
+          <div class="game-badge badge-green">Health &amp; Wellness • Medication Tracker</div>
+          <h2>Pill Reminder &amp; Med Tracker</h2>
+          <p>
+            An intuitive, privacy-first medication organizer and smart dosage reminder. Never miss a dose with rock-solid alarms, inventory refill warnings, color-coded schedules, and doctor-ready PDF reports — stored 100% locally on your device.
+          </p>
+
+          <div class="game-features">
+            <div class="feature-item"><span style="color:#00E676;">✓</span> Exact Alarms &amp; Full-Screen Alerts</div>
+            <div class="feature-item"><span style="color:#00E676;">✓</span> Medicine Stock &amp; Refill Warnings</div>
+            <div class="feature-item"><span style="color:#00E676;">✓</span> Color-Coded Custom Schedules</div>
+            <div class="feature-item"><span style="color:#00E676;">✓</span> Exportable Doctor PDF Reports</div>
+          </div>
+
+          <div class="btn-group">
+            <a href="https://play.google.com/store/apps/details?id=com.ossol.pill.reminder.tracker" target="_blank" rel="noopener" class="btn btn-green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.22-.916V2.73c0-.337.079-.652.22-.916zM15.207 13.414l2.585 2.586-13.064 7.545 10.479-10.131zm0-2.828L4.728.455l13.064 7.545-2.585 2.586zm1.414 1.414l3.535 2.041c.983.568.983 1.493 0 2.062l-3.535 2.041-2.121-2.121 2.121-2.023z"/>
+              </svg>
+              Google Play
+            </a>
+            <a href="/pill-reminder-privacy-policy.html" class="btn btn-secondary">
+              Pill Reminder Policy
+            </a>
+          </div>
+        </div>
+
+        <div class="game-preview preview-pill">
+          <img src="/pill-reminder-icon.webp" alt="Pill Reminder App Icon" class="preview-icon-img" onerror="this.style.display='none'; document.getElementById('alt-pill').style.display='block';"/>
+          <div id="alt-pill" style="display:none; font-size:4rem; margin-bottom:12px;">💊⚡</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Pill Reminder</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Medication Organizer &amp; Logbook</p>
+          <div class="preview-stats">
+            <div class="stat-box">
+              <div class="stat-number" style="color:#00E676;">100%</div>
+              <div class="stat-label">Reliable</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" style="color:#00F5FF;">PDF</div>
+              <div class="stat-label">Reports</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" style="color:#FF6B9D;">Offline</div>
+              <div class="stat-label">Private</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APP 4: GULF VPN -->
+      <div class="section-title" style="margin-top: 48px;">
+        <span>🛡️</span> Featured Security &amp; Network
+      </div>
+
+      <div class="featured-card vpn-theme">
+        <div class="game-info">
+          <div class="game-badge badge-blue">Security • High-Speed VPN</div>
+          <h2>Gulf VPN: Fast &amp; Secure Proxy</h2>
+          <p>
+            Fast, reliable, and encrypted VPN proxy engineered for seamless global connectivity. Unblock high-speed connections across the Gulf region and worldwide with a single tap, zero bandwidth caps, and strict zero-logs privacy.
+          </p>
+
+          <div class="game-features">
+            <div class="feature-item"><span style="color:#2979FF;">✓</span> One-Tap Instant Secure Connection</div>
+            <div class="feature-item"><span style="color:#2979FF;">✓</span> High-Speed Gulf &amp; Global Servers</div>
+            <div class="feature-item"><span style="color:#2979FF;">✓</span> Military-Grade Traffic Encryption</div>
+            <div class="feature-item"><span style="color:#2979FF;">✓</span> Strict Zero-Logs Privacy Policy</div>
+          </div>
+
+          <div class="btn-group">
+            <a href="https://play.google.com/store/apps/details?id=com.onestopsolutions.gulfvpnwa" target="_blank" rel="noopener" class="btn btn-blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.22-.916V2.73c0-.337.079-.652.22-.916zM15.207 13.414l2.585 2.586-13.064 7.545 10.479-10.131zm0-2.828L4.728.455l13.064 7.545-2.585 2.586zm1.414 1.414l3.535 2.041c.983.568.983 1.493 0 2.062l-3.535 2.041-2.121-2.121 2.121-2.023z"/>
+              </svg>
+              Google Play
+            </a>
+            <a href="/gulfvpn-privacy-policy.html" class="btn btn-secondary">
+              Gulf VPN Privacy Policy
+            </a>
+          </div>
+        </div>
+
+        <div class="game-preview preview-vpn">
+          <img src="/gulfvpn-icon.png" alt="Gulf VPN App Icon" class="preview-icon-img" onerror="this.style.display='none'; document.getElementById('alt-vpn').style.display='block';"/>
+          <div id="alt-vpn" style="display:none; font-size:4rem; margin-bottom:12px;">🛡️⚡</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Gulf VPN</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Fast &amp; Encrypted Proxy</p>
+          <div class="preview-stats">
+            <div class="stat-box">
+              <div class="stat-number" style="color:#2979FF;">Fast</div>
+              <div class="stat-label">Low Latency</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" style="color:#00F5FF;">AES-256</div>
+              <div class="stat-label">Encrypted</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number" style="color:#00E676;">0</div>
+              <div class="stat-label">Logs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APP 5: BRAIN BOOST -->
+      <div class="section-title" style="margin-top: 48px;">
         <span>🧠</span> Featured Puzzle Game
       </div>
 
       <div class="featured-card">
         <div class="game-info">
-          <div class="game-badge">Puzzle Collection</div>
-          <h2>Brain Boost</h2>
+          <div class="game-badge">Puzzle Collection • 2D Mind Game</div>
+          <h2>Brain Boost: Mind &amp; Puzzle Challenges</h2>
           <p>
-            An all-in-one puzzle adventure featuring seven distinct mechanics and hundreds of carefully crafted levels across 10 vibrant worlds.
+            An all-in-one puzzle adventure featuring seven distinct mechanics and hundreds of carefully crafted levels across 10 vibrant worlds. Challenge your spatial reasoning, memory, and logic skills anytime, anywhere — 100% offline.
           </p>
 
           <div class="game-features">
-            <div class="feature-item"><span>✓</span> 7 Puzzle Games in One</div>
-            <div class="feature-item"><span>✓</span> 350+ Progressive Levels</div>
-            <div class="feature-item"><span>✓</span> 10 Themed Worlds</div>
-            <div class="feature-item"><span>✓</span> 100% Offline Playable</div>
+            <div class="feature-item"><span style="color:#9E7BFF;">✓</span> 7 Puzzle Games in One App</div>
+            <div class="feature-item"><span style="color:#9E7BFF;">✓</span> 350+ Progressive Brain Levels</div>
+            <div class="feature-item"><span style="color:#9E7BFF;">✓</span> 10 Vibrant Themed Worlds</div>
+            <div class="feature-item"><span style="color:#9E7BFF;">✓</span> 100% Offline Playable</div>
           </div>
 
           <div class="btn-group">
-            <a href="https://play.google.com/store/apps/developer?id=Technoscope" target="_blank" class="btn btn-primary">
+            <a href="https://play.google.com/store/apps/developer?id=Technoscope" target="_blank" rel="noopener" class="btn btn-primary">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186a2.03 2.03 0 0 1-.22-.916V2.73c0-.337.079-.652.22-.916zM15.207 13.414l2.585 2.586-13.064 7.545 10.479-10.131zm0-2.828L4.728.455l13.064 7.545-2.585 2.586zm1.414 1.414l3.535 2.041c.983.568.983 1.493 0 2.062l-3.535 2.041-2.121-2.121 2.121-2.023z"/>
               </svg>
@@ -504,9 +783,10 @@
         </div>
 
         <div class="game-preview">
-          <div style="font-size: 4rem; margin-bottom: 12px; filter: drop-shadow(0 8px 16px var(--accent-glow));">🧠⚡</div>
-          <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Brain Boost 2D</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">Puzzle &amp; Mind Challenge Collection</p>
+          <img src="/brain-boost-icon.png" alt="Brain Boost App Icon" class="preview-icon-img" onerror="this.style.display='none'; document.getElementById('alt-brain').style.display='block';"/>
+          <div id="alt-brain" style="display:none; font-size:4rem; margin-bottom:12px;">🧠⚡</div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Brain Boost 2D</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Puzzle &amp; Mind Challenge Collection</p>
           <div class="preview-stats">
             <div class="stat-box">
               <div class="stat-number">7</div>
@@ -523,17 +803,24 @@
           </div>
         </div>
       </div>
+
     </section>
   </main>
 
   <footer>
-    <div>&copy; 2026 Technoscope. All rights reserved.</div>
-    <div class="footer-links">
-      <a href="/pill-reminder-privacy-policy.html">Pill Reminder Policy</a>
-      <a href="/clipcut-privacy-policy.html">ClipCut Privacy Policy</a>
-      <a href="/privacy-policy.html">Brain Boost Policy</a>
+    <div class="footer-top">
+      <div><strong>Technoscope</strong> &bull; Mobile Apps &amp; Games Studio</div>
+      <div>&copy; 2026 Technoscope. All rights reserved.</div>
+    </div>
+    <div style="font-weight: 700; color: #fff; margin-bottom: 8px;">Legal &amp; Privacy Policies:</div>
+    <div class="footer-links-grid">
+      <a href="/lutora-privacy-policy.html">Lutora Pro Privacy Policy</a>
+      <a href="/clipcut-privacy-policy.html">EditLine Video Editor Policy</a>
+      <a href="/pill-reminder-privacy-policy.html">Pill Reminder &amp; Med Tracker Policy</a>
+      <a href="/gulfvpn-privacy-policy.html">Gulf VPN Privacy Policy</a>
+      <a href="/privacy-policy.html">Brain Boost Privacy Policy</a>
       <a href="/app-ads.txt">app-ads.txt</a>
-      <a href="https://github.com/technoscope" target="_blank">GitHub</a>
+      <a href="https://github.com/technoscope" target="_blank" rel="noopener">GitHub Organization</a>
     </div>
   </footer>
 
