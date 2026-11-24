@@ -14,7 +14,7 @@ Official developer landing page, privacy policies, and app-ads.txt verification 
 
 ## Published Apps
 
-1. **Lutora Pro** (`com.onestop.lutora`) - Local 3D LUT & Batch Video Color Grader
+1. **Lutora Pro** (`com.onestop.lutora`) - Local 3D LUT & Batch Video Color Grader - [Google Play Store](https://play.google.com/store/apps/details?id=com.onestop.lutora)
 2. **EditLine: Video Editor & Maker** (`com.onestop.clipcut`) - All-in-One Reels & Video Editor
 3. **Pill Reminder & Med Tracker** (`com.ossol.pill.reminder.tracker`) - Smart Medication Tracker & Dose Organizer
 4. **Gulf VPN** (`com.onestopsolutions.gulfvpnwa`) - Fast & Secure Network Proxy
